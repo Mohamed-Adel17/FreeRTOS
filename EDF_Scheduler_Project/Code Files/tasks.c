@@ -2964,10 +2964,7 @@ BaseType_t xTaskIncrementTick( void )
                     #endif
 										
 										prvAddTaskToReadyList( pxTCB );
-										#if (configUSE_EDF_SCHEDULER == 1)
-										//vTaskSwitchContext();
-										//pxCurrentTCB = (TCB_t * ) listGET_OWNER_OF_HEAD_ENTRY( &(xReadyTasksListEDF));
-                    #endif
+								
 										/* A task being unblocked cannot cause an immediate
                      * context switch if preemption is turned off. */
                     #if ( configUSE_PREEMPTION == 1 )

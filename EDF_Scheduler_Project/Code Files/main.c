@@ -186,8 +186,7 @@ void Uart_Receiver(void)
 	}
 	while(1)
 	{	
-		vSerialPutString(*Tasks_Data, 62);
-		
+		vSerialPutString(*Tasks_Data, 62);	
 		vTaskDelayUntil( &xLastWakeTime, 20);
 	}
 }
